@@ -52,10 +52,11 @@ int main()
         free(palabra);
     }
     
-    
-
-
-
+    for (int i = 0; i < TAMA; i++)
+    {
+        free(nombre[i]);
+    }
+    free (buff);
     return 0;
 }
 
@@ -82,7 +83,7 @@ int BuscarNombrePorPalabra(char **nombre, char *palabra, int tama)
 
 void BuscarNombrePorId(char **nombre, int indice, int tama)
 {
-    if (indice >= 0 && indice <= tama)
+    if (indice >= 0 && indice < tama)
     {
         puts(nombre[indice]);
     }
